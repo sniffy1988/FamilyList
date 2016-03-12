@@ -1,7 +1,7 @@
 <ion-view view-title="Family List">
     <ion-content class="padding">
         <ion-list>
-            <ion-item ng-repeat="item in buy.list" ng-show="buy.list.length" class="item-toggle">
+            <ion-item ng-repeat="item in buy.list" class="item-toggle">
                 <span ng-bind="item.name"></span>
                 <label class="toggle toggle-balanced">
                     <input type="checkbox" ng-model="item.isDone">
