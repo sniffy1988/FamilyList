@@ -8,8 +8,14 @@ function BuyService($firebase, $firebaseArray, $log, $q) {
         return defer.promise;
     }
 
+    function _add(item) {
+        var defer = $q.defer();
+        var list = $firebaseArray(ref).$add(item);
+    }
+
     return {
-        getItems: _getItemsList
+        getItems: _getItemsList,
+        addItem: _add
     }
 }
 angular

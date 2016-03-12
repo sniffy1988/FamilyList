@@ -24,9 +24,12 @@ function BuyCtrl(BLANK_BUY_ITEM, $log, BuyService) {
     _updateList();
     buy.add = function () {
         if (buy.model !== '') {
-            buy.item.name = buy.model;
-            buy.list.push(angular.copy(buy.item));
+            BuyService.addItem({
+                name: buy.model,
+                isDone: false
+            });
             buy.model = '';
+            _updateList();
         }
     }
 }
